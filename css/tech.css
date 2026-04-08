@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.price {
+  font-size: 2rem;
+  color: #22c55e;
+}
+
+.cta {
+  text-align: center;
+  padding: 2rem;
+}
+.hank-guide {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.cta {
+  text-align: center;
+  padding: 3rem 1rem;
+}
