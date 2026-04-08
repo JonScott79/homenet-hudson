@@ -64,16 +64,6 @@ nav a {
   text-decoration: none;
 }
 
-/* CALL BUTTON */
-.call-btn {
-  background: #22c55e;
-  color: black;
-  padding: 10px 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 /* HERO */
 .hero {
   padding: 3rem 1rem;
@@ -251,4 +241,71 @@ footer a:hover {
 .call-btn:hover {
   background: #22c55e;
   color: #020617;
+}
+
+/* ======================
+   REALISTIC VETERAN STAMP
+   ====================== */
+
+.veteran-stamp {
+  position: relative;
+  display: inline-block;
+  padding: 12px 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #b91c1c;
+  border: 3px solid #b91c1c;
+  transform: rotate(-4deg) translateY(2px);
+  margin-top: 20px;
+
+  /* layered ink + pressure feel */
+  box-shadow:
+    0 0 0 2px rgba(185, 28, 28, 0.15) inset,
+    0 1px 2px rgba(0,0,0,0.6),
+    0 4px 8px rgba(0,0,0,0.4);
+
+  /* slightly uneven ink opacity */
+  opacity: 0.9;
+
+  /* subtle roughness */
+  filter: contrast(1.2) brightness(0.95) saturate(1.1);
+
+  /* ink bleed effect */
+  text-shadow: 0 0 1px rgba(185, 28, 28, 0.5);
+}
+
+/* ink texture overlay */
+.veteran-stamp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(rgba(0,0,0,0.25) 1px, transparent 1px),
+    radial-gradient(rgba(0,0,0,0.15) 1px, transparent 1px);
+
+  background-size: 3px 3px, 5px 5px;
+  background-position: 0 0, 1px 2px;
+
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* worn edge effect */
+.veteran-stamp::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border: 2px dashed rgba(185, 28, 28, 0.25);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* mobile tweak */
+@media (max-width: 600px) {
+  .veteran-stamp {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
 }

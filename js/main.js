@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // 🔥 PAGE DETECTION
   const path = window.location.pathname;
 
   let hankLines = [];
 
-  // 🛠 TECH PAGE LINES
+  // TECH PAGE LINES
   if (path.includes("tech")) {
     hankLines = [
       "Slow internet? Yeah, we’re fixing that.",
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
   }
 
-  // 🏠 DEFAULT (HOME PAGE)
+  // 🏠 DEFAULT
   else {
     hankLines = [
       "I’ve got this.",
@@ -55,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
   }
 
-  // 🧠 SMART RANDOM (NO REPEATS)
   let lastLine = "";
 
   function getNewLine() {
@@ -68,38 +66,37 @@ document.addEventListener("DOMContentLoaded", () => {
     return newLine;
   }
 
-  // 💬 SET INITIAL TEXT
   const bubbles = document.querySelectorAll(".hank-text");
 
-  bubbles.forEach(bubble => {
-    bubble.textContent = getNewLine();
-  });
+  function updateAllBubbles() {
+    const line = getNewLine();
+    bubbles.forEach(bubble => {
+      bubble.textContent = line;
+    });
+  }
 
-  // 🖱️ HOVER INTERACTION
+  // initial load
+  updateAllBubbles();
+
+  // hover interaction
   const wrappers = document.querySelectorAll(".hank-wrapper");
 
   wrappers.forEach(wrapper => {
     wrapper.addEventListener("mouseenter", () => {
-      const text = wrapper.querySelector(".hank-text");
-      if (text) {
-        text.textContent = getNewLine();
-      }
+      updateAllBubbles();
     });
   });
 
-  // ⏱️ OPTIONAL: RANDOM CHATTY MODE (every 8–15 sec)
-  // makes Hank feel alive
+  // ⏱️ chatter loop (more human timing)
   function randomInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
   function startChatter() {
     setTimeout(() => {
-      bubbles.forEach(bubble => {
-        bubble.textContent = getNewLine();
-      });
+      updateAllBubbles();
       startChatter();
-    }, randomInterval(8000, 15000));
+    }, randomInterval(10000, 20000)); // slower, more natural
   }
 
   startChatter();
