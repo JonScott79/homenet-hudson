@@ -50,17 +50,24 @@ nav {
 
 nav a {
   color: white;
-  margin: 0 10px;
   font-weight: 500;
   text-decoration: none;
 }
 
 /* ======================
-   HERO
+   HERO (FIXED)
    ====================== */
 .hero {
-  padding: 3rem 1rem;
+  padding: 60px 20px 40px;
   text-align: center;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 /* ======================
@@ -70,11 +77,11 @@ nav a {
   background: #1e293b;
   border: 1px solid #22c55e;
   color: #22c55e;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 6px;
   text-decoration: none;
-  margin: 5px;
   transition: all 0.2s ease;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -120,13 +127,17 @@ nav a {
 }
 
 /* ======================
-   HANK SYSTEM
+   HANK SYSTEM (FIXED)
    ====================== */
 .hank-wrapper {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
   max-width: 160px;
   margin: 20px auto;
-  transition: transform 0.3s ease;
+  position: relative;
 }
 
 .hank-wrapper:hover {
@@ -166,7 +177,7 @@ nav a {
    ====================== */
 .cta {
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 }
 
 /* ======================
@@ -187,23 +198,23 @@ nav a {
 }
 
 /* ======================
-   FOOTER (FIXED)
+   FOOTER (TIGHT FIX)
    ====================== */
 footer {
   background: #020617;
   border-top: 1px solid #1e293b;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
 
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; 
-  gap: 20px;
+  align-items: flex-start;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -211,7 +222,7 @@ footer {
 .footer-right {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .footer-right {
@@ -221,13 +232,13 @@ footer {
 
 .footer-left p,
 .footer-right p {
-  margin: 0; 
+  margin: 0;
 }
 
 .footer-left p:last-child {
-  margin-top: 10px;
+  margin-top: 6px;
   opacity: 0.7;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 footer a {
@@ -247,7 +258,7 @@ footer a:hover {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin: 25px 0;
+  margin: 20px 0;
   font-weight: bold;
   color: #22c55e;
   text-align: center;
@@ -282,61 +293,60 @@ footer a:hover {
 }
 
 /* ======================
-   VETERAN STAMP
+   VETERAN STAMP (IMPROVED)
    ====================== */
 .veteran-stamp {
-  position: relative;
   display: inline-block;
-  padding: 12px 18px;
+  margin-top: 10px;
+  padding: 10px 16px;
+
   font-weight: 900;
-  text-transform: uppercase;
+  font-size: 0.85rem;
   letter-spacing: 2px;
+  text-transform: uppercase;
+
   color: #b91c1c;
   border: 3px solid #b91c1c;
-  transform: rotate(-4deg) translateY(2px);
-  margin-top: 20px;
+
+  transform: rotate(-3deg);
 
   box-shadow:
-    0 0 0 2px rgba(185, 28, 28, 0.15) inset,
     0 1px 2px rgba(0,0,0,0.6),
-    0 4px 8px rgba(0,0,0,0.4);
+    0 3px 6px rgba(0,0,0,0.4);
 
-  opacity: 0.9;
-  filter: contrast(1.2) brightness(0.95) saturate(1.1);
-  text-shadow: 0 0 1px rgba(185, 28, 28, 0.5);
-}
-
-.veteran-stamp::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background-image:
-    radial-gradient(rgba(0,0,0,0.25) 1px, transparent 1px),
-    radial-gradient(rgba(0,0,0,0.15) 1px, transparent 1px);
-
-  background-size: 3px 3px, 5px 5px;
-  background-position: 0 0, 1px 2px;
-
-  opacity: 0.2;
-  pointer-events: none;
-}
-
-.veteran-stamp::after {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border: 2px dashed rgba(185, 28, 28, 0.25);
-  opacity: 0.6;
-  pointer-events: none;
+  opacity: 0.95;
 }
 
 /* ======================
-   MOBILE
+   MOBILE (CRITICAL FIXES)
    ====================== */
-@media (max-width: 600px) {
-  .veteran-stamp {
-    font-size: 0.8rem;
-    padding: 8px 12px;
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 40px 20px 30px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  nav {
+    display: none; /* optional if you add hamburger later */
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    align-items: center;
   }
 }
