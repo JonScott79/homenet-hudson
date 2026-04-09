@@ -220,6 +220,12 @@ footer a:hover {
   text-align: center;
 }
 
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 /* ======================
 	Call BUTTON
    ====================== */

@@ -1,0 +1,13 @@
+<svg width="20" height="14" viewBox="0 0 19 10" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+  <!-- stripes -->
+  <rect width="19" height="10" fill="#b22234"></rect>
+  <g fill="#fff">
+    <rect y="1" width="19" height="1"></rect>
+    <rect y="3" width="19" height="1"></rect>
+    <rect y="5" width="19" height="1"></rect>
+    <rect y="7" width="19" height="1"></rect>
+    <rect y="9" width="19" height="1"></rect>
+  </g>
+  <!-- blue canton -->
+  <rect width="8" height="5.5" fill="#3c3b6e"></rect>
+</svg>
