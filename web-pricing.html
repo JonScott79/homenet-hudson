@@ -3,38 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Design & SEO Services in Hudson, MA | HomeNet Hudson</title>
+  <title>Web Design & SEO Services in Hudson, MA | HomeNet Hudson</title>
 
-<meta name="description" content="Professional website design and SEO services in Hudson, MA. Fast, modern, and built to bring in customers.">
+  <meta name="description" content="Professional website design and SEO services in Hudson, MA. Fast, modern, and built to bring in customers.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/web.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/web.css">
 
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="icon" type="image/png" href="images/logo-primary.png">
   <link rel="manifest" href="images/site.webmanifest">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "HomeNet Hudson",
-  "image": "https://homenethudson.com/images/logo-primary.png",
-  "telephone": "+15085718819",
-  "email": "homenethudson@outlook.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Hudson",
-    "addressRegion": "MA",
-    "addressCountry": "US"
-  },
-  "areaServed": "Hudson MA, Marlborough MA, Bolton MA",
-  "url": "https://homenethudson.com"
-}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "HomeNet Hudson",
+    "image": "https://homenethudson.com/images/logo-primary.png",
+    "telephone": "+15085718819",
+    "email": "homenethudson@outlook.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hudson",
+      "addressRegion": "MA",
+      "addressCountry": "US"
+    },
+    "areaServed": "Hudson MA, Marlborough MA, Bolton MA",
+    "url": "https://homenethudson.com"
+  }
+  </script>
+
+<!-- ========== GOOGLE ANALYTICS ========== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RH5JLNDP3T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RH5JLNDP3T');
 </script>
 
 </head>
@@ -44,7 +54,11 @@
 <header class="site-header">
   <div class="container">
 
-    <img src="images/logo-primary.png" alt="HomeNet logo" class="logo">
+    <img 
+      src="images/logo-primary.png" 
+      alt="HomeNet Hudson logo - in-home tech support and web services in Hudson MA" 
+      class="logo"
+    >
 
     <nav>
       <a href="index.html">Home</a>
@@ -52,7 +66,7 @@
       <a href="web-pricing.html">Web Services</a>
     </nav>
 
-    <a href="tel:+15085718819" class="call-btn">
+    <a href="tel:+15085718819" class="call-btn" aria-label="Call HomeNet Hudson at 508 571 8819">
       📞 <span>(508) 571-8819</span>
     </a>
 
@@ -69,11 +83,11 @@
   <div class="hank-wrapper">
     <img 
       src="images/homenet-hank.png" 
-      alt="HomeNet Hank smiling and ready to help with tech support" 
+      alt="HomeNet Hank helping build high performing websites and SEO in Hudson MA"
       class="hank-img"
     >
 
-    <div class="speech-bubble">
+    <div class="speech-bubble" aria-label="Hank web tip">
       <p class="hank-text" aria-live="polite">Loading...</p>
     </div>
   </div>
@@ -81,9 +95,18 @@
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
-<span class="trust-item">🪖 Veteran Owned & Operated</span>
-<span class="trust-item">⚡ Fast fixes, No BS</span>
-<span class="trust-item">⚙️ Real solutions</span>
+  <span class="trust-item">
+    <span aria-hidden="true">🪖</span>
+    Veteran Owned & Operated
+  </span>
+  <span class="trust-item">
+    <span aria-hidden="true">⚡</span>
+    Fast fixes, No BS
+  </span>
+  <span class="trust-item">
+    <span aria-hidden="true">⚙️</span>
+    Real solutions
+  </span>
 </div>
 
 <!-- SERVICES -->
@@ -115,7 +138,7 @@
 
 </section>
 
-<!-- STIR MY COFFEE PROOF -->
+<!-- PROOF SECTION -->
 <section class="cta">
   <h2>Built by a Real Developer</h2>
 
@@ -131,7 +154,12 @@
     If I can build and launch a platform like that, I can build something that brings customers to your business.
   </p>
 
-  <a href="https://stirmycoffee.com" target="_blank" class="btn">
+  <a 
+    href="https://stirmycoffee.com" 
+    target="_blank" 
+    class="btn"
+    aria-label="View Stir My Coffee live web application"
+  >
     See It Live
   </a>
 </section>
@@ -143,16 +171,22 @@
   <div class="hank-wrapper">
     <img 
       src="images/homenet-hank.png" 
-      alt="HomeNet Hank smiling and ready to help with tech support" 
+      alt="HomeNet Hank ready to help grow your business with web design and SEO in Hudson MA"
       class="hank-img"
     >
 
-    <div class="speech-bubble">
+    <div class="speech-bubble" aria-label="Hank web tip">
       <p class="hank-text" aria-live="polite">Loading...</p>
     </div>
   </div>
 
-  <a href="mailto:homenethudson@outlook.com" class="btn">Get a Quote</a>
+  <a 
+    href="mailto:homenethudson@outlook.com" 
+    class="btn"
+    aria-label="Request a quote for web design services"
+  >
+    Get a Quote
+  </a>
 </section>
 
 </main>

@@ -3,48 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>In-Home Tech Support Pricing | Hudson, MA | HomeNet Hudson</title>
+  <title>In-Home Tech Support Pricing | Hudson, MA | HomeNet Hudson</title>
 
-<meta name="description" content="Clear, upfront pricing for in-home tech support in Hudson, MA. WiFi, troubleshooting, smart home, and more.">
+  <meta name="description" content="Clear, upfront pricing for in-home tech support in Hudson, MA. WiFi, troubleshooting, smart home, and more.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/tech.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/tech.css">
 
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="icon" type="image/png" href="images/logo-primary.png">
   <link rel="manifest" href="images/site.webmanifest">
+  
+  <!-- ========== GOOGLE ANALYTICS ========== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RH5JLNDP3T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RH5JLNDP3T');
+</script>
+
 </head>
 
 <body>
 
 <header class="site-header">
   <div class="container">
-    <img src="images/logo-primary.png" alt="HomeNet logo" class="logo">
+    <img 
+      src="images/logo-primary.png" 
+      alt="HomeNet Hudson logo - in-home tech support and web services in Hudson MA" 
+      class="logo"
+    >
+
     <nav>
       <a href="index.html">Home</a>
       <a href="tech-pricing.html">Tech Pricing</a>
       <a href="web-pricing.html">Web Services</a>
     </nav>
-    <a href="tel:+15085718819" class="call-btn">📞 <span>(508) 571-8819</span></a>
+
+    <a href="tel:+15085718819" class="call-btn" aria-label="Call HomeNet Hudson at 508 571 8819">
+      📞 <span>(508) 571-8819</span>
+    </a>
   </div>
 </header>
 
 <main>
 
+<!-- HERO -->
 <section class="hero">
-<h1>In-Home Tech Support Pricing in Hudson, MA</h1>
-<p>Simple, honest pricing. No guesswork.</p>
+  <h1>In-Home Tech Support Pricing in Hudson, MA</h1>
+  <p>Simple, honest pricing. No guesswork.</p>
+
+  <div class="hank-wrapper">
+    <img 
+      src="images/homenet-hank.png" 
+      alt="HomeNet Hank helping with in-home tech support and WiFi repair in Hudson MA"
+      class="hank-img"
+    >
+
+    <div class="speech-bubble" aria-label="Hank tech tip">
+      <p class="hank-text" aria-live="polite">Loading...</p>
+    </div>
+  </div>
 </section>
 
+<!-- TRUST BAR -->
 <div class="trust-bar">
-<span class="trust-item">🪖 Veteran Owned & Operated</span>
-<span class="trust-item">⚡ Fast fixes, No BS</span>
-<span class="trust-item">⚙️ Real solutions</span>
+  <span class="trust-item">
+    <span aria-hidden="true">🪖</span>
+    Veteran Owned & Operated
+  </span>
+  <span class="trust-item">
+    <span aria-hidden="true">⚡</span>
+    Fast fixes, No BS
+  </span>
+  <span class="trust-item">
+    <span aria-hidden="true">⚙️</span>
+    Real solutions
+  </span>
 </div>
 
+<!-- PRICING -->
 <h2 class="section-title">Flat Rate Services</h2>
 
 <section class="pricing monthly">
@@ -95,13 +138,34 @@
 
 </section>
 
+<!-- CTA -->
+<section class="cta">
+  <h2>Need Help Now?</h2>
+
+  <div class="hank-wrapper">
+    <img 
+      src="images/homenet-hank.png" 
+      alt="HomeNet Hank ready to fix home tech issues in Hudson MA"
+      class="hank-img"
+    >
+
+    <div class="speech-bubble" aria-label="Hank tech tip">
+      <p class="hank-text" aria-live="polite">Loading...</p>
+    </div>
+  </div>
+
+  <a href="tel:+15085718819" class="btn" aria-label="Call now for tech support">
+    Call Now
+  </a>
+</section>
+
 </main>
 
 <footer>
   <div class="footer-container">
 
     <div class="footer-left">
-<p>📍 Servicing Hudson, MA, Marlborough, Bolton, and surrounding areas</p>
+      <p>📍 Servicing Hudson, MA, Marlborough, Bolton, and surrounding areas</p>
       <p>© 2026 HomeNet Hudson</p>
     </div>
 
@@ -112,6 +176,9 @@
 
   </div>
 </footer>
+
+<!-- SCRIPT -->
+<script src="js/main.js"></script>
 
 </body>
 </html>
