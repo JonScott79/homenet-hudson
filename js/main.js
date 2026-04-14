@@ -1,3 +1,7 @@
+// ================
+// Hank!
+// ================
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const path = window.location.pathname;
@@ -102,3 +106,32 @@ document.addEventListener("DOMContentLoaded", () => {
   startChatter();
 
 });
+
+// ====================
+// Analytics
+// ====================
+
+window.addEventListener('scroll', () => {
+  const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+
+  if (scrollPercent > 0.5 && !window.scrolledHalf) {
+    gtag('event', 'scroll_50', {'event_category': 'engagement'});
+    window.scrolledHalf = true;
+  }
+});
+
+//FOR FUTURE USE, NOT A DEAD FUNCTION!!!!!!!
+//For analytics
+function trackEvent(name, category, data = {}) {
+  try {
+    if (typeof gtag === 'function') {
+      gtag('event', name, {
+        event_category: category,
+        ...data
+      });
+    }
+  } catch (e) {
+    console.warn('Analytics event failed:', name);
+  }
+}
+// onclick="trackEvent('call_click','conversion',{location:'hero'})"
