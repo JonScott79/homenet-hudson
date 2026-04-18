@@ -11,32 +11,38 @@ document.addEventListener("DOMContentLoaded", () => {
   // TECH PAGE LINES
   if (path.includes("tech")) {
     hankLines = [
-      "Slow internet? Yeah, we’re fixing that.",
-      "WiFi acting up? I’ve seen worse.",
-      "Most issues take one visit. Seriously.",
-      "No tech jargon. Just fixed.",
-      "Yeah… that’s definitely fixable.",
-      "We’ll get this running right.",
-      "Dead zones? Not on my watch.",
-      "You won’t need to call support again.",
-      "I fix it right the first time.",
-      "Let’s clean this mess up."
+    "Slow systems? Yeah, we’ll fix that.",
+    "Network issues, printers, computers… I handle it.",
+    "Most problems are fixed in one visit.",
+    "Home or business, same deal—we get it working.",
+    "No tech jargon. Just working tech.",
+    "Yeah… that’s fixable.",
+    "We’ll get everything running the right way.",
+    "If it’s tech, I’ve seen it before.",
+    "You shouldn’t have to deal with this twice.",
+    "I fix it right the first time.",
+	"Losing time because of tech? That’s where I come in.",
+    "Same-day service when you need it.",
+	"Downtime costs you. Let’s fix that.",
+    "Let’s clean this up."
     ];
   }
 
   // 💻 WEB PAGE LINES
   else if (path.includes("web")) {
     hankLines = [
-      "Nice website… but does it get customers?",
-      "Speed matters. A lot.",
-      "Most sites don’t convert. Mine do.",
-      "Google needs structure. I handle that.",
-      "Let’s get you ranking.",
-      "Fast sites win. Period.",
-      "This is where your growth starts.",
-      "Your competition won’t like this.",
-      "Clicks are nice. Customers are better.",
-      "Let’s build something that works."
+    "Nice site… but is it bringing in customers?",
+    "Speed matters more than people think.",
+    "Most sites don’t convert. That’s the problem.",
+    "Google cares about structure. I handle that.",
+    "Let’s get you showing up.",
+    "Fast, clean sites win. Every time.",
+    "This is where growth actually starts.",
+    "Your competition isn’t doing this right.",
+    "Traffic is nice. Customers are better.",
+    "No cookie-cutter sites here.",
+    "Built by the guy behind Stir My Coffee.",
+    "Let’s build something that works."
     ];
   }
 
