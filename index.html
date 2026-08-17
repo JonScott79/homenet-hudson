@@ -30,16 +30,16 @@
 
 <main>
   <!-- Hero Section -->
-  <section class="hero" style="background: url('../_images/svg/background.svg') center/cover no-repeat; padding: 4rem 2rem; position: relative;">
-    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; align-items:center;">
+  <section style="background: url('images/background.svg') center/cover no-repeat; padding: 4rem 2rem; position: relative;">
+    <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items:center;">
       <div class="hero-content">
         <h1 style="font-size: 3.5rem; text-transform: uppercase; line-height: 1.0; color: var(--color-navy); margin-bottom: 1.5rem;">Technology Should Work For You.</h1>
         <p style="font-size: 1.4rem; color: var(--color-navy); font-weight:600; margin-bottom: 1rem;">Network down? Computer acting up?<br>Let's get you back on track.</p>
         <p style="font-family: 'Brush Script MT', cursive, sans-serif; font-size: 2.2rem; color: var(--color-primary); margin-bottom: 2rem; line-height:1.2;">Real people. Real solutions.<br>That's the LANZAR way.</p>
         
-        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:1rem; max-width: 350px;">
           <a href="tel:+15085718819" style="display:flex; align-items:center; gap:15px; background:white; padding:1rem 1.5rem; border-radius:12px; border:2px solid var(--color-primary); color:var(--color-navy); text-decoration:none; box-shadow: 4px 4px 0 var(--color-primary); transition:transform 0.2s;">
-            <div style="background:var(--color-primary); width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+            <div style="background:var(--color-primary); width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
             </div>
             <div>
@@ -49,7 +49,7 @@
           </a>
           
           <a href="mailto:jon@lanzar.me" style="display:flex; align-items:center; gap:15px; background:white; padding:1rem 1.5rem; border-radius:12px; border:2px solid var(--color-primary); color:var(--color-navy); text-decoration:none; box-shadow: 4px 4px 0 var(--color-primary); transition:transform 0.2s;">
-            <div style="background:var(--color-primary); width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+            <div style="background:var(--color-primary); width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
               <svg width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
             </div>
             <div>
@@ -60,14 +60,70 @@
         </div>
       </div>
       
-      <div class="hero-image" style="text-align:right;">
+      <div style="text-align:right;">
         <img src="images/hero-hank.jpg" alt="Hank giving a thumbs up" style="width:100%; border:6px solid var(--color-cream); border-radius:16px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
       </div>
     </div>
   </section>
 
+  <!-- What We Do -->
+  <section class="section" style="background:var(--color-cream); padding:4rem 2rem;">
+    <h2 class="section-title" style="text-align:center; color:var(--color-navy); font-size: 2.5rem; margin-bottom: 3rem;">WHAT WE DO</h2>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:2rem; max-width:1200px; margin:0 auto;">
+      
+      <div class="service-card" style="background:white; border: 2px solid var(--color-navy); border-radius:12px; padding:2rem; text-align:left;">
+        <h3 style="color:var(--color-navy); text-transform:uppercase; font-size:1.3rem; margin-bottom:1rem;">Managed IT Support</h3>
+        <p style="color:#475569; font-size:1rem; margin-bottom:1.5rem;">Proactive support to prevent problems before they start.</p>
+        <a href="tel:+15085718819" style="color:var(--color-primary); font-weight:bold; display:flex; align-items:center; justify-content:flex-end; text-decoration:none;">
+          <div style="background:var(--color-primary); color:white; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">&#8250;</div>
+        </a>
+      </div>
+      
+      <div class="service-card" style="background:white; border: 2px solid var(--color-navy); border-radius:12px; padding:2rem; text-align:left;">
+        <h3 style="color:var(--color-navy); text-transform:uppercase; font-size:1.3rem; margin-bottom:1rem;">Network Administration</h3>
+        <p style="color:#475569; font-size:1rem; margin-bottom:1.5rem;">Fast, secure, and reliable network solutions.</p>
+        <a href="tel:+15085718819" style="color:var(--color-primary); font-weight:bold; display:flex; align-items:center; justify-content:flex-end; text-decoration:none;">
+          <div style="background:var(--color-primary); color:white; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">&#8250;</div>
+        </a>
+      </div>
+
+      <div class="service-card" style="background:white; border: 2px solid var(--color-navy); border-radius:12px; padding:2rem; text-align:left;">
+        <h3 style="color:var(--color-navy); text-transform:uppercase; font-size:1.3rem; margin-bottom:1rem;">Server Monitoring</h3>
+        <p style="color:#475569; font-size:1rem; margin-bottom:1.5rem;">We keep an eye on your systems 24/7 so you don't have to.</p>
+        <a href="tel:+15085718819" style="color:var(--color-primary); font-weight:bold; display:flex; align-items:center; justify-content:flex-end; text-decoration:none;">
+          <div style="background:var(--color-primary); color:white; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">&#8250;</div>
+        </a>
+      </div>
+
+      <div class="service-card" style="background:white; border: 2px solid var(--color-navy); border-radius:12px; padding:2rem; text-align:left;">
+        <h3 style="color:var(--color-navy); text-transform:uppercase; font-size:1.3rem; margin-bottom:1rem;">Workstation Support</h3>
+        <p style="color:#475569; font-size:1rem; margin-bottom:1.5rem;">Setup, repair, and optimization for peak performance.</p>
+        <a href="tel:+15085718819" style="color:var(--color-primary); font-weight:bold; display:flex; align-items:center; justify-content:flex-end; text-decoration:none;">
+          <div style="background:var(--color-primary); color:white; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">&#8250;</div>
+        </a>
+      </div>
+
+      <div class="service-card" style="background:white; border: 2px solid var(--color-navy); border-radius:12px; padding:2rem; text-align:left;">
+        <h3 style="color:var(--color-navy); text-transform:uppercase; font-size:1.3rem; margin-bottom:1rem;">Security & Hardening</h3>
+        <p style="color:#475569; font-size:1rem; margin-bottom:1.5rem;">Protecting your data, your systems, and your business.</p>
+        <a href="tel:+15085718819" style="color:var(--color-primary); font-weight:bold; display:flex; align-items:center; justify-content:flex-end; text-decoration:none;">
+          <div style="background:var(--color-primary); color:white; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">&#8250;</div>
+        </a>
+      </div>
+
+      <div class="service-card" style="background:white; border: 2px solid var(--color-navy); border-radius:12px; padding:2rem; text-align:left;">
+        <h3 style="color:var(--color-navy); text-transform:uppercase; font-size:1.3rem; margin-bottom:1rem;">Remote & Onsite</h3>
+        <p style="color:#475569; font-size:1rem; margin-bottom:1.5rem;">We're there when you need us, whether near or far.</p>
+        <a href="tel:+15085718819" style="color:var(--color-primary); font-weight:bold; display:flex; align-items:center; justify-content:flex-end; text-decoration:none;">
+          <div style="background:var(--color-primary); color:white; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">&#8250;</div>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Banner -->
-  <section style="background:#f1f5f9; border-top:2px solid var(--color-navy); border-bottom:2px solid var(--color-navy); padding:1rem 2rem;">
+  <section style="background:#f1f5f9; border-top:2px solid var(--color-navy); border-bottom:2px solid var(--color-navy); padding:1.5rem 2rem;">
     <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
       <div style="display:flex; align-items:center; gap:1.5rem;">
         <div>
@@ -146,7 +202,7 @@
           </div>
         </div>
         
-        <a href="tech-pricing.html" class="btn btn-outline" style="margin-top:2.5rem; display:inline-block; border-radius:24px; color:var(--color-primary); border-color:var(--color-primary); text-decoration:none; font-weight:bold;">LEARN MORE ABOUT OUR SERVICES &rsaquo;</a>
+        <a href="tech-pricing.html" class="btn btn-outline" style="margin-top:2.5rem; display:inline-block; border-radius:24px; color:var(--color-primary); border-color:var(--color-primary); text-decoration:none; font-weight:bold;">LEARN MORE ABOUT OUR SERVICES &#8250;</a>
       </div>
 
       <!-- Right side: Meet Hank -->
@@ -155,7 +211,7 @@
           <h2 style="font-size:2rem; color:white; text-transform:uppercase; margin-bottom:1rem;">Meet Hank</h2>
           <p style="color:var(--color-cream); font-size:1.05rem; line-height:1.6; margin-bottom:1.5rem;">Hank is your LANZAR Technician. When technology misbehaves, he shows up with the right tools, the right attitude, and a plan to fix it.</p>
           <p style="font-family:'Brush Script MT', cursive, sans-serif; font-size:1.6rem; color:var(--color-cream); margin-bottom:2rem; line-height:1.2;">Friendly. Reliable.<br>Always ready to help.</p>
-          <a href="tel:+15085718819" class="btn btn-outline" style="border-radius:24px; color:white; border-color:white; text-decoration:none;">MORE ABOUT HANK &rsaquo;</a>
+          <a href="tel:+15085718819" class="btn btn-outline" style="border-radius:24px; color:white; border-color:white; text-decoration:none;">MORE ABOUT HANK &#8250;</a>
         </div>
         <div style="position:absolute; right:0; bottom:0; height:100%; width:40%;">
            <img src="images/hank-portrait.jpg" alt="Hank Portrait" style="height:100%; width:100%; object-fit:cover; border-left:4px solid var(--color-primary);">
