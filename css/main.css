@@ -1518,3 +1518,27 @@ nav a:hover {
         padding: 2rem;
     }
 }
+
+
+/* ==========================================================================
+   Global Site Footer - Dark Background
+   ========================================================================== */
+.site-footer {
+    background: var(--color-navy) !important;
+    color: white !important;
+    padding: 4rem 2rem 2.5rem;
+    border-top: 4px solid var(--color-primary);
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.site-footer a {
+    color: var(--color-cream);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-footer a:hover {
+    color: var(--color-primary);
+}
