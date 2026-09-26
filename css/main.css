@@ -1196,71 +1196,233 @@ nav a:hover {
 }
 
 /* Project Services Cards */
+/* ==========================================================================
+   Project & On-Demand Cards - Modern Redesign
+   ========================================================================== */
 .project-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.75rem;
+    margin: 2.5rem 0 3.5rem;
 }
 
 .project-item-card {
-    background: white;
-    border: 2px solid var(--color-navy);
-    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(16, 42, 67, 0.12);
+    border-radius: 20px;
     padding: 1.75rem;
-    box-shadow: 4px 4px 0px rgba(16, 42, 67, 0.1);
+    box-shadow: 0 10px 30px -5px rgba(16, 42, 67, 0.06), 0 2px 6px -1px rgba(16, 42, 67, 0.04);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
 }
 
-.project-header-row {
+.project-item-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #f46b45, #eea849);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-item-card:hover {
+    transform: translateY(-6px);
+    background: #ffffff;
+    border-color: rgba(244, 107, 69, 0.35);
+    box-shadow: 0 22px 40px -10px rgba(16, 42, 67, 0.14), 0 4px 12px -2px rgba(16, 42, 67, 0.06);
+}
+
+.project-item-card:hover::before {
+    opacity: 1;
+}
+
+/* Card Top: Icon + Price Tag Row */
+.project-card-top {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
 }
 
-.project-title {
-    font-size: 1.2rem;
-    font-weight: 800;
-    text-transform: uppercase;
+.project-icon-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(16, 42, 67, 0.07), rgba(16, 42, 67, 0.02));
+    border: 1px solid rgba(16, 42, 67, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-navy);
-    margin: 0;
+    transition: all 0.3s ease;
 }
 
-.project-price-badge {
-    background: rgba(244, 107, 69, 0.12);
+.project-item-card:hover .project-icon-badge {
+    background: linear-gradient(135deg, rgba(244, 107, 69, 0.14), rgba(238, 168, 73, 0.08));
     color: var(--color-primary);
-    font-weight: 800;
-    font-size: 0.9rem;
-    padding: 0.3rem 0.75rem;
-    border-radius: 20px;
-    white-space: nowrap;
-    border: 1px solid rgba(244, 107, 69, 0.3);
+    border-color: rgba(244, 107, 69, 0.25);
 }
 
-.project-desc {
+.project-icon-badge svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Price Tags */
+.project-price-tag {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0.35rem 0.85rem;
+    border-radius: 12px;
+}
+
+.project-price-tag.starting {
+    background: rgba(244, 107, 69, 0.09);
+    border: 1px solid rgba(244, 107, 69, 0.25);
+}
+
+.project-price-tag.starting .price-caption {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #c2410c;
+    line-height: 1;
+}
+
+.project-price-tag.starting .price-amount {
+    font-size: 1.2rem;
+    font-weight: 850;
+    color: #9a3412;
+    line-height: 1.1;
+    margin-top: 2px;
+}
+
+.project-price-tag.quoted {
+    background: rgba(15, 23, 42, 0.05);
+    border: 1px solid rgba(15, 23, 42, 0.12);
+}
+
+.project-price-tag.quoted .price-caption {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 750;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    line-height: 1;
+}
+
+.project-price-tag.quoted .price-amount {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.1;
+    margin-top: 2px;
+}
+
+/* Card Title & Typography */
+.project-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-navy);
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+.project-card-desc {
     font-size: 0.92rem;
     color: #475569;
     line-height: 1.5;
-    margin: 0 0 1rem;
+    margin: 0 0 1.25rem 0;
+    min-height: 44px;
 }
 
-.project-bullets {
+/* Features List with Styled Checks */
+.project-feature-list {
     list-style: none;
     padding: 0;
-    margin: 0;
-    font-size: 0.85rem;
-    color: #334155;
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
 }
 
-.project-bullets li {
-    padding: 0.25rem 0;
+.project-feature-list li {
     display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    font-size: 0.88rem;
+    color: #334155;
+    line-height: 1.4;
+}
+
+.feat-check {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.12);
+    color: #059669;
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.feat-check svg {
+    width: 12px;
+    height: 12px;
+}
+
+/* Card Action Footer */
+.project-card-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(226, 232, 240, 0.9);
+}
+
+.project-card-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: var(--color-navy);
+    font-size: 0.88rem;
+    font-weight: 750;
+    text-decoration: none;
+    transition: all 0.22s ease;
+}
+
+.project-card-action-btn:hover {
+    background: var(--color-navy);
+    color: #ffffff;
+    border-color: var(--color-navy);
+    box-shadow: 0 4px 12px rgba(16, 42, 67, 0.15);
+}
+
+.project-card-action-btn .btn-arrow {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.22s ease;
+}
+
+.project-card-action-btn:hover .btn-arrow {
+    transform: translateX(4px);
 }
 
 /* Web Dev Separation Card */
